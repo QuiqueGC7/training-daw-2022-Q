@@ -1,4 +1,7 @@
 function hello(name, lastname, years) {
+    let respuesta = `Hola ${name} ${lastname}, tienes ${years} años de edad`
+    console.log (respuesta)
+    return respuesta
 }
 
 let result = hello('John', 'Anderton', 35)
