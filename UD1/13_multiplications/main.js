@@ -1,10 +1,12 @@
 function printMultiplicationTables() {
-    for(let i = 0; i<10; i++){
-        for(let j = 0; j<10; j++){
+    for(let i = 0; i<=10; i++){
+        let row = []
+        for(let j = 0; j<=10; j++){
+            row .push(j*i)
 
     }
 }
-
+}
 printMultiplicationTables()
 // expected output
 //     1   2   3   ...

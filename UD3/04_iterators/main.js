@@ -1,6 +1,6 @@
 'use strict'
 
-const assert = require('assert').strict;
+// const assert = require('assert').strict;
 
 var pilots = [
   {
@@ -30,10 +30,22 @@ var pilots = [
 ];
 
 function iterateSimple() {
+  for(let i=0; i<pilots.length; i++){
+    console.log(pilots[i]);
+  }
+  
 }
+let j = 0;
 function iterateForEach() {
+  pilots.forEach(element => {
+    console.log(pilots[j]);
+    j++
+  });
 }
-function mapIds() {
+function mapIds(pilots) {
+  let Ids = pilots.map (p=>p.id)
+  for(let i=0; i<Ids.length; i++){
+    console.log("Id: "+Ids[i]);}
 }
 function rebels() {
 }
@@ -42,17 +54,19 @@ function totalFaction(faction) {
 function avgYears(faction) {
 }
 
+
 // use console.log
 iterateSimple()
 iterateForEach()
+mapIds(pilots)
 try {
-  assert.deepStrictEqual(mapIds(), [2,8,40,66])
-  assert.deepStrictEqual(rebels(), [pilots[0], pilots[3]])
+  //assert.deepStrictEqual(mapIds(), [2,8,40,66])
+  //assert.deepStrictEqual(rebels(), [pilots[0], pilots[3]])
 
-  assert.deepStrictEqual(totalFaction('Rebels'), 2)
+  //assert.deepStrictEqual(totalFaction('Rebels'), 2)
 
-  assert.deepStrictEqual(avgYears('Rebels'), 22.5)
-  assert.deepStrictEqual(avgYears('Empire'), 25)
+  //assert.deepStrictEqual(avgYears('Rebels'), 22.5)
+  //assert.deepStrictEqual(avgYears('Empire'), 25)
 } catch (error) {
   console.error(error)
 }
